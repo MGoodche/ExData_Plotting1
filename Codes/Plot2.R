@@ -26,3 +26,6 @@ dates <- as.Date(c("2007-02-01", "2007-02-02"), "%Y-%m-%d")
 data <- subset(data, Date %in% dates)
 ## You can simply make a plot by using the plot() function
 plot(data$Time, data$Global_active_power, type="l", col="black", xlab="", ylab="Global Active Power (kilowatts)")
+## Copy the plot to a plot2.PNG file
+dev.copy(png, file = "plot2.png" ,width = 500, height = 500)  
+dev.off()
