@@ -26,3 +26,7 @@ dates <- as.Date(c("2007-02-01", "2007-02-02"), "%Y-%m-%d")
 data <- subset(data, Date %in% dates)
 ## You can simply make a histogram by using the hist() function, which computes a histogram of the given data values
 hist(data$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
+## Copy the plot to a plot1.PNG file
+dev.copy(png, file = "plot1.png" ,width = 500, height = 500)  
+dev.off()
+
